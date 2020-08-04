@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'w+9g5*f^_1_^h=b7)3u$al+&2oy(bfoukh#6$_06(#05#=zh_x'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -50,11 +48,31 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'dj_fav_admin.urls'
+import datetime
 
+import os
+import sys
+from os.path import abspath, dirname, join, basename, normpath
+from sys import path
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
+
+# fetch the project_root
+PROJECT_ROOT = dirname(BASE_DIR)
+print(BASE_DIR)
+TEMPLATE_ROOT = os.path.join(BASE_DIR, 'templates/')
+PROJECT_TEMPLATES = [
+    TEMPLATE_ROOT,
+]
+
+TEMPLATE_DIRS = (
+    TEMPLATE_ROOT,
+)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': PROJECT_TEMPLATES,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,7 +87,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dj_fav_admin.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -79,7 +96,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -99,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -113,8 +128,15 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+
+STATICFILES_DIRS = [
+    join(BASE_DIR, 'static'),
+]
+print(BASE_DIR, 'ddddddd')
+# collect static files here
+STATIC_ROOT = join(BASE_DIR, 'run', 'static')
 
 STATIC_URL = '/static/'
