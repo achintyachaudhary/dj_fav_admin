@@ -1,7 +1,0 @@
-setup.cfg
-setup.py
-dj_fav_admin.egg-info/PKG-INFO
-dj_fav_admin.egg-info/SOURCES.txt
-dj_fav_admin.egg-info/dependency_links.txt
-dj_fav_admin.egg-info/requires.txt
-dj_fav_admin.egg-info/top_level.txt
