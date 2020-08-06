@@ -16,7 +16,7 @@ def boot_django():
         DATABASES={
             "default": {
                 "ENGINE": "django.db.backends.sqlite3",
-                "NAME": os.path.join(BASE_DIR, "dj_fav_admin/db.sqlite3"),
+                "NAME": "db.sqlite3",
             }
         },
         INSTALLED_APPS=(

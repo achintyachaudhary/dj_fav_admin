@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+favorite/__init__.py
+favorite/admin.py
+favorite/apps.py
+favorite/models.py
+favorite/tests.py
+favorite/views.py
+favorite/migrations/0001_initial.py
+favorite/migrations/__init__.py
+trollism1234.egg-info/PKG-INFO
+trollism1234.egg-info/SOURCES.txt
+trollism1234.egg-info/dependency_links.txt
+trollism1234.egg-info/requires.txt
+trollism1234.egg-info/top_level.txt
